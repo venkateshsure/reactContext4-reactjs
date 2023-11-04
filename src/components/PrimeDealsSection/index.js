@@ -39,6 +39,7 @@ class PrimeDealsSection extends Component {
     const response = await fetch(apiUrl, options)
     if (response.ok === true) {
       const fetchedData = await response.json()
+      console.log(fetchedData)
       const updatedData = fetchedData.prime_deals.map(product => ({
         title: product.title,
         brand: product.brand,
